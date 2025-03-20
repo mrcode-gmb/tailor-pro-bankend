@@ -6,8 +6,8 @@ const sidebarData = [
     title: "Add Mesurement",
     icon: "fa-table-columns",
     children: [
-      { title: "Manual Entry", link: "/manual-entry" },
-      { title: "AI Entry", link: "/mesurement-ai-entry" },
+      { title: "Manual Entry", link: route("measurement.index") },
+      { title: "AI Entry", link: route("measurement.aiMeasurement") },
     ],
   },
   {
@@ -82,23 +82,24 @@ const UserSideBar = ({ pageTitle }:any) => {
         <nav className="py-12 ">
           <ul className="gap-y-3">
             <li>
-              <div
+              <Link
+              href={route("dashboard")}
                 className="flex items-center gap-2 py-3 px-3 bg-white hover:bg-white rounded-lg"
               >
                 <div className="bg-green-500 size-8 rounded-lg flex">
                   <i className="fa fa-home m-auto text-white text-sm"></i>
                 </div>
                 <p className="text-sm text-slate-600">Dasboard</p>
-              </div>
+              </Link>
             </li>
             <div className="font-bold mb-1 mt-7 px-3 border-r-red-500">
               <h4 className="text-slate-600">Pages</h4>
             </div>
             {sidebarData.map((menu:any) => (
-              <li key={menu.title} className="list-item">
+              <li key={menu.title} className="list-item transition-all duration-500">
                 <div
                   onClick={() => toggleMenu(menu.title)}
-                  className="flex items-center justify-between gap-2 py-3 px-3 hover:bg-white rounded-lg"
+                  className="flex cursor-default items-center justify-between gap-2 py-3 px-3 transition-all duration-400 hover:bg-white rounded-lg "
                 >
                   <div className="flex items-center gap-2">
                     <div className="bg-white text-slate-600 shadow-md rounded-lg size-8 flex">
@@ -121,7 +122,7 @@ const UserSideBar = ({ pageTitle }:any) => {
                   </div>
                 </div>
                 {openMenus[menu.title] && menu.children && (
-                  <ul className="ml-10 mt-2 space-y-2 text-slate-600">
+                  <ul className="ml-10 mt-2 space-y-2 text-slate-600 transition-all duration-500">
                     {menu.children.map((child: any) =>
                       child.children ? (
                         <li key={child.title}>
@@ -283,7 +284,7 @@ const UserSideBar = ({ pageTitle }:any) => {
             </div>
             <div className="relative">
               <img
-                src="/src/assets/softwere.jpeg"
+                src="@/../../assets/softwere.jpeg"
                 className="w-10 h-10 object-cover rounded-full cursor-pointer"
                 alt=""
                 onClick={openDropDown}

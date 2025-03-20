@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MeasurementController;
+use App\Http\Controllers\RegisteredUserMeasurementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
+    Route::controller(MeasurementController::class)->group(function(){
+
+        Route::get('/manaul-measurements', 'index')->name('measurement.index');
+        Route::get('/ai-measurements', 'aiMeasurement')->name('measurement.aiMeasurement');
+    });
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
