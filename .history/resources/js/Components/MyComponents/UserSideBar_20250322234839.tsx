@@ -14,16 +14,16 @@ const sidebarData = [
     title: "Orders",
     icon: " fa-cart-shopping",
     children: [
-      { title: "My Order", link: route("order.index") },
-      { title: "New Order", link: route("order.newOrder") },
+      { title: "My Order", link: route() },
+      { title: "New Order", link: "/buy-professional-product" },
     ],
   },
   {
     title: "Tailor",
     icon: "fa-user-group",
     children: [
-      { title: "My Tailors", link: route("tailors.index") },
-      { title: "Find Tailors", link: route("tailors.newTailors") },
+      { title: "My Tailors", link: "/my-tailors" },
+      { title: "Find Tailors", link: "/follow-new-tailors" },
     ],
   },
 
@@ -31,8 +31,8 @@ const sidebarData = [
     title: "Generate Design",
     icon: "fa-regular fa-window-restore",
     children: [
-      { title: "AI Design", link: route("design.index") },
-      { title: "Manual Design", link: route('design.manualDesign') },
+      { title: "AI Design", link: "/ai-designs" },
+      { title: "Manual Design", link: "/manual-designs" },
     ],
   },
 ];
@@ -200,7 +200,7 @@ const UserSideBar = ({ pageTitle }:any) => {
               <h4 className="text-slate-600">Links</h4>
             </div>
             <li>
-              <Link href={route("messages.index")} className="flex items-center gap-2 py-3 px-3 hover:bg-white rounded-lg">
+              <Link href={`/my-tailors-chat`} className="flex items-center gap-2 py-3 px-3 hover:bg-white rounded-lg">
                 <div className="bg-white text-slate-600 shadow-md rounded-lg size-8 flex">
                   <i className="fa fa-regular fa-comment m-auto text-sm"></i>
                 </div>

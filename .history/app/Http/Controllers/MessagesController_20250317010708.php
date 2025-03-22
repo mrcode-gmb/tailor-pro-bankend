@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Inertia\Inertia;
 use App\Models\Messages;
 use Illuminate\Http\Request;
 
@@ -14,7 +13,6 @@ class MessagesController extends Controller
     public function index()
     {
         //
-        return Inertia::render("User/Messages/Tailors");
     }
 
     /**

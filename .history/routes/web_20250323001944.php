@@ -58,7 +58,7 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::controller(MessagesController::class)->group(function(){
-        Route::get('/my-tailors-chat', 'index')->name('messages.index');
+        Route::get('/my-tailors-chat', 'index')->name('design.index');
     });
     
     

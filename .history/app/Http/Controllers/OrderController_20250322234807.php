@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Inertia\Inertia;
-use App\Models\Messages;
 use Illuminate\Http\Request;
 
-class MessagesController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +12,7 @@ class MessagesController extends Controller
     public function index()
     {
         //
-        return Inertia::render("User/Messages/Tailors");
+        return Inertia::render("User/Measurements/ManualMeasurement");
     }
 
     /**
@@ -36,7 +34,7 @@ class MessagesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Messages $messages)
+    public function show(string $id)
     {
         //
     }
@@ -44,7 +42,7 @@ class MessagesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Messages $messages)
+    public function edit(string $id)
     {
         //
     }
@@ -52,7 +50,7 @@ class MessagesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Messages $messages)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -60,7 +58,7 @@ class MessagesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Messages $messages)
+    public function destroy(string $id)
     {
         //
     }

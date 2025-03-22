@@ -1,14 +1,10 @@
 <?php
 
-use App\Http\Controllers\DesignsController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
-use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TailorsController;
 use App\Http\Controllers\MeasurementController;
-use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\RegisteredUserMeasurementController;
 
 /*
@@ -42,26 +38,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/ai-measurements', 'aiMeasurement')->name('measurement.aiMeasurement');
     });
 
-    Route::controller(OrderController::class)->group(function(){
-        Route::get('/my-order', 'index')->name('order.index');
-        Route::get('/new-order', 'newOrder')->name('order.newOrder');
+    Route::controller(MeasurementController::class)->group(function(){
+        Route::get('/my-order', 'index')->name('measurement.index');
+        Route::get('/new-order', 'newOrder')->name('measurement.aiMeasurement');
     });
 
-    Route::controller(TailorsController::class)->group(function(){
-        Route::get('/my-tailors', 'index')->name('tailors.index');
-        Route::get('/follow-new-tailors', 'newTailors')->name('tailors.newTailors');
-    });
-
-    Route::controller(DesignsController::class)->group(function(){
-        Route::get('/ai-designs', 'index')->name('design.index');
-        Route::get('/manual-designs', 'manualDesign')->name('design.manualDesign');
-    });
-
-    Route::controller(MessagesController::class)->group(function(){
-        Route::get('/my-tailors-chat', 'index')->name('messages.index');
-    });
-    
-    
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

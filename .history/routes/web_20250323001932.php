@@ -8,7 +8,6 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TailorsController;
 use App\Http\Controllers\MeasurementController;
-use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\RegisteredUserMeasurementController;
 
 /*
@@ -57,8 +56,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/manual-designs', 'manualDesign')->name('design.manualDesign');
     });
 
-    Route::controller(MessagesController::class)->group(function(){
-        Route::get('/my-tailors-chat', 'index')->name('messages.index');
+    Route::controller(DesignsController::class)->group(function(){
+        Route::get('/my-tailors-chat', 'index')->name('design.index');
     });
     
     
