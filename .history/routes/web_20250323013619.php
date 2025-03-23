@@ -10,7 +10,7 @@ use App\Http\Controllers\TailorsController;
 use App\Http\Controllers\MeasurementController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\RegisteredUserMeasurementController;
-use App\Http\Controllers\SubscriptionController;
+use App\Models\Subscription;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,8 +61,8 @@ Route::middleware('auth')->group(function () {
     Route::controller(MessagesController::class)->group(function(){
         Route::get('/my-tailors-chat', 'index')->name('messages.index');
     });
-    Route::controller(SubscriptionController::class)->group(function(){
-        Route::get('/subscription-plan', 'index')->name('subscription.index');
+    Route::controller(Subscription::class)->group(function(){
+        Route::get('/my-tailors-chat', 'index')->name('messages.index');
     });
     
     

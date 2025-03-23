@@ -62,7 +62,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/my-tailors-chat', 'index')->name('messages.index');
     });
     Route::controller(SubscriptionController::class)->group(function(){
-        Route::get('/subscription-plan', 'index')->name('subscription.index');
+        Route::get('/subsc', 'index')->name('messages.index');
     });
     
     
