@@ -122,8 +122,8 @@ export default function Edit({
                                             alt=""
                                         />
                                         <div>
-                                            <span className="text-xs bg-blue-100 p text-gray-600x-2 py-1 rounded-lg">
-                                                <i className="fa fa-folder-open"></i> 2004 - 2007
+                                            <span className="text-xs bg-blue-100 px-2 py-1 rounded-lg">
+                                                PRO
                                             </span>
                                             <h4 className="text-xl font-bold mt-2">
                                                 Abubakar Umar
@@ -225,8 +225,8 @@ export default function Edit({
                                   </p>
                                 </div>
                                 <li className="relative block px-0 py-2 border-0 text-inherit">
-                                    <span className="text-xs bg-blue-100 p text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
+                                    <span className="text-xs bg-blue-100 px-2 py-1 rounded-lg">
+                                        PRO
                                     </span>
                                 </li>
                               </div>
@@ -252,8 +252,8 @@ export default function Edit({
                                   </p>
                                 </div>
                                 <li className="relative block px-0 py-2 border-0 text-inherit">
-                                    <span className="text-xs bg-blue-100 p text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
+                                    <span className="text-xs bg-blue-100 px-2 py-1 rounded-lg">
+                                    PRO
                                     </span>
                                 </li>
                               </div>
@@ -279,8 +279,8 @@ export default function Edit({
                                   </p>
                                 </div>
                                 <li className="relative block px-0 py-2 border-0 text-inherit">
-                                      <span className="text-xs bg-blue-100 text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
+                                      <span className="text-xs bg-blue-100 px-2 py-1 rounded-lg">
+                                        PRO
                                     </span>
                                 </li>
                               </div>

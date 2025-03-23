@@ -122,8 +122,8 @@ export default function Edit({
                                             alt=""
                                         />
                                         <div>
-                                            <span className="text-xs bg-blue-100 p text-gray-600x-2 py-1 rounded-lg">
-                                                <i className="fa fa-folder-open"></i> 2004 - 2007
+                                            <span className="text-xs bg-blue-100 px-2 py-1 rounded-lg">
+                                                PRO
                                             </span>
                                             <h4 className="text-xl font-bold mt-2">
                                                 Abubakar Umar
@@ -225,9 +225,9 @@ export default function Edit({
                                   </p>
                                 </div>
                                 <li className="relative block px-0 py-2 border-0 text-inherit">
-                                    <span className="text-xs bg-blue-100 p text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
-                                    </span>
+                                <span className="text-xs bg-blue-100 px-2 py-1 rounded-lg">
+                                                PRO
+                                            </span>
                                 </li>
                               </div>
                             </div>
@@ -252,9 +252,23 @@ export default function Edit({
                                   </p>
                                 </div>
                                 <li className="relative block px-0 py-2 border-0 text-inherit">
-                                    <span className="text-xs bg-blue-100 p text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
-                                    </span>
+                                  <div className="min-h-6 mb-0.5 block pl-0">
+                                    <label className="inline-flex gap-3 items-center cursor-pointer">
+                                      <label
+                                        className="w-4/5 mb-0 ml-4 overflow-hidden font-normal cursor-pointer text-sm text-ellipsis whitespace-nowrap text-slate-500"
+                                        htmlFor="flexSwitchCheckDefault1"
+                                      >
+                                        Enable
+                                      </label>
+                                      <input
+                                        type="checkbox"
+                                        value=""
+                                        checked
+                                        className="sr-only peer shrink-0"
+                                      />
+                                      <div className="relative w-10 h-5 shrink-0 bg-gray-200 peer-focus:outline-none  peer-focus:ring-green-300 dark:peer-focus:ring-green-800 rounded-full peer dark:bg-gray-300 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:bg-green-600"></div>
+                                    </label>
+                                  </div>
                                 </li>
                               </div>
                             </div>
@@ -279,9 +293,23 @@ export default function Edit({
                                   </p>
                                 </div>
                                 <li className="relative block px-0 py-2 border-0 text-inherit">
-                                      <span className="text-xs bg-blue-100 text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
-                                    </span>
+                                  <div className="min-h-6 mb-0.5 block pl-0">
+                                    <label className="inline-flex gap-3 items-center cursor-pointer">
+                                      <label
+                                        className="w-4/5 mb-0 ml-4 overflow-hidden font-normal cursor-pointer text-sm text-ellipsis whitespace-nowrap text-slate-500"
+                                        htmlFor="flexSwitchCheckDefault1"
+                                      >
+                                        Enable
+                                      </label>
+                                      <input
+                                        type="checkbox"
+                                        value=""
+                                        checked
+                                        className="sr-only peer shrink-0"
+                                      />
+                                      <div className="relative w-10 h-5 shrink-0 bg-gray-200 peer-focus:outline-none  peer-focus:ring-green-300 dark:peer-focus:ring-green-800 rounded-full peer dark:bg-gray-300 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:bg-green-600"></div>
+                                    </label>
+                                  </div>
                                 </li>
                               </div>
                             </div>

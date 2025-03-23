@@ -122,8 +122,8 @@ export default function Edit({
                                             alt=""
                                         />
                                         <div>
-                                            <span className="text-xs bg-blue-100 p text-gray-600x-2 py-1 rounded-lg">
-                                                <i className="fa fa-folder-open"></i> 2004 - 2007
+                                            <span className="text-xs bg-blue-100 px-2 py-1 rounded-lg">
+                                                PRO
                                             </span>
                                             <h4 className="text-xl font-bold mt-2">
                                                 Abubakar Umar
@@ -192,106 +192,7 @@ export default function Edit({
                         </div>
                     </div>
 
-                    <div className="mt-6">
-                    <div
-                      className="relative flex flex-col min-w-0 mt-6 break-words bg-white border-0 shadow-lg rounded-2xl bg-clip-border"
-                      id="2FA"
-                    >
-                      <div className="flex p-6 rounded-t-2xl">
-                        <div>
-                          <h5 className="mb-0 text-slate-600 text-xl font-bold">
-                            Education & Tailoring ExperienceShow
-                          </h5>
-                        </div>
-                      </div>
-                        <hr className="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-black dark:to-transparent" />
-                      <div className="flex-auto p-6">
-                        
-                        <div className="flex gap-2">
-                          <img
-                            src="@/../../assets/logo-spotify.svg"
-                            className="w-14 h-14 object-cover shrink-0"
-                            alt=""
-                          />
-                          <div className="w-full">
-                            <div className="block">
-                              <div className="flex justify-between items-center">
-                                <div>
-                                  <p className="text-slate-600 text-lg font-semibold">
-                                    Spotify
-                                  </p>
-                                  <p className="text-sm my-1 text-slate-600">
-                                    <a href="">Music</a>
-                                  </p>
-                                </div>
-                                <li className="relative block px-0 py-2 border-0 text-inherit">
-                                    <span className="text-xs bg-blue-100 p text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
-                                    </span>
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr className="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-gray-600 dark:to-transparent" />
-                        <div className="flex gap-2">
-                          <img
-                            src="@/../../assets/logo-asana.svg"
-                            className="w-14 h-14 object-cover shrink-0"
-                            alt=""
-                          />
-                          <div className="w-full">
-                            <div className="block">
-                              <div className="flex justify-between items-center">
-                                <div>
-                                  <p className="text-slate-600 text-lg font-semibold">
-                                    Asana
-                                  </p>
-                                  <p className="text-sm my-1 text-slate-600">
-                                    <a href="">Organize your team</a>
-                                  </p>
-                                </div>
-                                <li className="relative block px-0 py-2 border-0 text-inherit">
-                                    <span className="text-xs bg-blue-100 p text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
-                                    </span>
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr className="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-gray-600 dark:to-transparent" />
-                        <div className="flex gap-2">
-                          <img
-                            src="@/../../assets/logo-atlassian.svg"
-                            className="w-14 h-14 object-cover shrink-0"
-                            alt=""
-                          />
-                          <div className="w-full">
-                            <div className="block">
-                              <div className="flex justify-between items-center">
-                                <div>
-                                  <p className="text-slate-600 text-lg font-semibold">
-                                    Atlassian
-                                  </p>
-                                  <p className="text-sm my-1 text-slate-600">
-                                    <a href="">Payment vendor</a>
-                                  </p>
-                                </div>
-                                <li className="relative block px-0 py-2 border-0 text-inherit">
-                                      <span className="text-xs bg-blue-100 text-gray-600 px-2 py-1 rounded-lg">
-                                        <i className="fa fa-folder-open"></i> 2004 - 2007
-                                    </span>
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                          <hr className="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-black dark:to-transparent" />
-                                        <PrimaryButton>Edit !</PrimaryButton>
-                      </div>
-                    </div>
-                  </div>
+                    
 
                     <div className=" relative">
                         <Footer />

@@ -295,7 +295,7 @@ const UserSideBar = ({ pageTitle }:any) => {
                 }`}
               >
                 <li className="list-none p-5 py-1 transition-all duration-200 hover:underline">
-                  <Link href={route("profile.edit")} className="text-nowrap text-sm">
+                  <Link href={route("profile")} className="text-nowrap text-sm">
                     My Account
                   </Link>
                 </li>
