@@ -65,23 +65,26 @@ const UserSideBar = ({ pageTitle }:any) => {
   return (
     <>
       <div
-        className={`fixed inset-y-0 left-0 flex-wrap items-center justify-between overflow-y-auto transition-all duration-200 bg-white z-40 max-xl:z-50 border-0 shadow-xl xl:p-6 max-xl:px-6 max-xl:w-72 max-xl:shadow-2xl max-xl:min-h-full ease-soft-in-out w-1/6 xl:translate-x-0  ${
+        className={`2xl:p-8 fixed inset-y-0 left-0 flex-wrap items-center justify-between overflow-y-auto transition-all duration-200 bg-white z-40 border-0 shadow-lg xl:p-6 max-xl:px-6 max-xl:w-72 max-xl:shadow-2xl max-xl:min-h-full dark:bg-gray-100  ease-soft-in-out w-1/6 xl:translate-x-0 xl:bg-transparent ${
           isMenuOpening ? `` : `-translate-x-full`
         }`}
       >
-    
-        <nav className="pt-16 max-xl:pt-4">
         <div
-          className="top-2 -right-1 z-50 bg-green-500 text-green-200 w-10 h-10 hidden max-xl:flex rounded-s-full flex absolute"
+          className="top-2 -right-1 z-50 bg-green-500 text-white w-10 h-10 hidden max-xl:flex rounded-s-full flex absolute"
           onClick={() => toggleMenuAll(false)}
         >
           <i className="fa fa-angle-left m-auto"></i>
         </div>
+        <div className="flex items-center gap-3 border-b-slate-50 max-xl:pt-8">
+          <i className="fa text-2xl fa-atom"></i>
+          <h3 className="text-nowrap">TailoringPro</h3>
+        </div>
+        <nav className="py-12 ">
           <ul className="gap-y-3">
             <li>
               <Link
               href={route("dashboard")}
-                className="flex items-center gap-2 py-3 px-3 hover:bg-white rounded-lg"
+                className="flex items-center gap-2 py-3 px-3 bg-white hover:bg-white rounded-lg"
               >
                 <div className="bg-green-500 size-8 rounded-lg flex">
                   <i className="fa fa-home m-auto text-white text-sm"></i>
@@ -183,6 +186,15 @@ const UserSideBar = ({ pageTitle }:any) => {
                 )}
               </li>
             ))}
+            {/* <li>
+                            <Link className="flex items-center gap-2 py-3 px-3 hover:bg-white rounded-lg">
+                                <div className="bg-white text-slate-600 shadow-md rounded-lg size-8 flex">
+                                    <i className="fa fa-screwdriver-wrench m-auto text-sm"></i>
+                                </div>
+                                <p className="text-sm text-slate-600">Applications</p>
+                            </Link>
+                        </li>
+                         */}
 
             <div className="font-bold mb-1 mt-7 px-3 border-r-red-500">
               <h4 className="text-slate-600">Links</h4>
@@ -243,32 +255,27 @@ const UserSideBar = ({ pageTitle }:any) => {
         </nav>
       </div>
 
-      <div className=" mb-24">
+      <div className="">
         <div className="flex bg-white w-full fixed left-0 z-40 top-0 shadow-md justify-between items-center px-4 py-2">
           <div className="flex items-center gap-6">
-            <div className="flex gap-3 items-center font-extrabold text-xl text-gray-600">
-              <i className="fa fa-align-left cursor-default" onClick={() => toggleMenuAll(true)}></i>
+            <div className="">
+              <i className="fa fa-align-left"></i>
               <img src="@/../../assets/Screenshot_from_2025-03-23_17-12-19-removebg-preview.png" className="w-[8.5rem]" alt="" />
-              <div className="relative flex max-xl:hidden ml-10">
-                <input
-                  type="search"
-                  placeholder="Type here..."
-                  className="p-3 py-2 outline-none w-[300px] rounded-lg text-sm border border-gray-300 focus:border-green-600"
-                />
-              </div>
             </div>
-            
+            <div
+              className="hidden max-xl:block"
+              onClick={() => toggleMenuAll(true)}
+            >
+              <i className="fa fa-bars-staggered"></i>
+            </div>
           </div>
           <div className="flex justify-end items-center gap-5 text-slate-600">
-            <div className="relative flex gap-5 max-xl">
-                <div className="text-xl cursor-pointer">
-                  <i className="fa fa-bell"></i>
-                </div>
-                <div className="cursor-pointer">
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" >
-                    <path fill-rule="evenodd" d="M4.857 3A1.857 1.857 0 0 0 3 4.857v4.286C3 10.169 3.831 11 4.857 11h4.286A1.857 1.857 0 0 0 11 9.143V4.857A1.857 1.857 0 0 0 9.143 3H4.857Zm10 0A1.857 1.857 0 0 0 13 4.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 21 9.143V4.857A1.857 1.857 0 0 0 19.143 3h-4.286Zm-10 10A1.857 1.857 0 0 0 3 14.857v4.286C3 20.169 3.831 21 4.857 21h4.286A1.857 1.857 0 0 0 11 19.143v-4.286A1.857 1.857 0 0 0 9.143 13H4.857Zm10 0A1.857 1.857 0 0 0 13 14.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 21 19.143v-4.286A1.857 1.857 0 0 0 19.143 13h-4.286Z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
+            <div className="relative flex max-xl:hidden">
+              <input
+                type="search"
+                placeholder="Type here..."
+                className="p-3 py-2 outline-none rounded-lg text-sm border border-gray-300 focus:border-green-600"
+              />
             </div>
             <div className="relative">
               <img

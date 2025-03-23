@@ -70,13 +70,7 @@ const UserSideBar = ({ pageTitle }:any) => {
         }`}
       >
     
-        <nav className="pt-16 max-xl:pt-4">
-        <div
-          className="top-2 -right-1 z-50 bg-green-500 text-green-200 w-10 h-10 hidden max-xl:flex rounded-s-full flex absolute"
-          onClick={() => toggleMenuAll(false)}
-        >
-          <i className="fa fa-angle-left m-auto"></i>
-        </div>
+        <nav className="pt-16">
           <ul className="gap-y-3">
             <li>
               <Link

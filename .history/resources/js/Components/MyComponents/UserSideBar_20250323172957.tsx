@@ -65,23 +65,26 @@ const UserSideBar = ({ pageTitle }:any) => {
   return (
     <>
       <div
-        className={`fixed inset-y-0 left-0 flex-wrap items-center justify-between overflow-y-auto transition-all duration-200 bg-white z-40 max-xl:z-50 border-0 shadow-xl xl:p-6 max-xl:px-6 max-xl:w-72 max-xl:shadow-2xl max-xl:min-h-full ease-soft-in-out w-1/6 xl:translate-x-0  ${
+        className={`2xl:p-8 fixed inset-y-0 left-0 flex-wrap items-center justify-between overflow-y-auto transition-all duration-200 bg-white z-40 border-0 shadow-lg xl:p-6 max-xl:px-6 max-xl:w-72 max-xl:shadow-2xl max-xl:min-h-full dark:bg-gray-100  ease-soft-in-out w-1/6 xl:translate-x-0 xl:bg-transparent ${
           isMenuOpening ? `` : `-translate-x-full`
         }`}
       >
-    
-        <nav className="pt-16 max-xl:pt-4">
         <div
-          className="top-2 -right-1 z-50 bg-green-500 text-green-200 w-10 h-10 hidden max-xl:flex rounded-s-full flex absolute"
+          className="top-2 -right-1 z-50 bg-green-500 text-white w-10 h-10 hidden max-xl:flex rounded-s-full flex absolute"
           onClick={() => toggleMenuAll(false)}
         >
           <i className="fa fa-angle-left m-auto"></i>
         </div>
+        <div className="flex items-center gap-3 border-b-slate-50 max-xl:pt-8">
+          <i className="fa text-2xl fa-atom"></i>
+          <h3 className="text-nowrap">TailoringPro</h3>
+        </div>
+        <nav className="py-12 ">
           <ul className="gap-y-3">
             <li>
               <Link
               href={route("dashboard")}
-                className="flex items-center gap-2 py-3 px-3 hover:bg-white rounded-lg"
+                className="flex items-center gap-2 py-3 px-3 bg-white hover:bg-white rounded-lg"
               >
                 <div className="bg-green-500 size-8 rounded-lg flex">
                   <i className="fa fa-home m-auto text-white text-sm"></i>
@@ -183,6 +186,15 @@ const UserSideBar = ({ pageTitle }:any) => {
                 )}
               </li>
             ))}
+            {/* <li>
+                            <Link className="flex items-center gap-2 py-3 px-3 hover:bg-white rounded-lg">
+                                <div className="bg-white text-slate-600 shadow-md rounded-lg size-8 flex">
+                                    <i className="fa fa-screwdriver-wrench m-auto text-sm"></i>
+                                </div>
+                                <p className="text-sm text-slate-600">Applications</p>
+                            </Link>
+                        </li>
+                         */}
 
             <div className="font-bold mb-1 mt-7 px-3 border-r-red-500">
               <h4 className="text-slate-600">Links</h4>
@@ -243,11 +255,11 @@ const UserSideBar = ({ pageTitle }:any) => {
         </nav>
       </div>
 
-      <div className=" mb-24">
+      <div className="">
         <div className="flex bg-white w-full fixed left-0 z-40 top-0 shadow-md justify-between items-center px-4 py-2">
           <div className="flex items-center gap-6">
             <div className="flex gap-3 items-center font-extrabold text-xl text-gray-600">
-              <i className="fa fa-align-left cursor-default" onClick={() => toggleMenuAll(true)}></i>
+              <i className="fa fa-align-left" onClick={() => toggleMenuAll(true)}></i>
               <img src="@/../../assets/Screenshot_from_2025-03-23_17-12-19-removebg-preview.png" className="w-[8.5rem]" alt="" />
               <div className="relative flex max-xl:hidden ml-10">
                 <input
@@ -260,7 +272,7 @@ const UserSideBar = ({ pageTitle }:any) => {
             
           </div>
           <div className="flex justify-end items-center gap-5 text-slate-600">
-            <div className="relative flex gap-5 max-xl">
+            <div className="relative flex gap-5 max-xl:hidden">
                 <div className="text-xl cursor-pointer">
                   <i className="fa fa-bell"></i>
                 </div>

@@ -65,23 +65,26 @@ const UserSideBar = ({ pageTitle }:any) => {
   return (
     <>
       <div
-        className={`fixed inset-y-0 left-0 flex-wrap items-center justify-between overflow-y-auto transition-all duration-200 bg-white z-40 max-xl:z-50 border-0 shadow-xl xl:p-6 max-xl:px-6 max-xl:w-72 max-xl:shadow-2xl max-xl:min-h-full ease-soft-in-out w-1/6 xl:translate-x-0  ${
+        className={`2xl:p-8 fixed inset-y-0 left-0 flex-wrap items-center justify-between overflow-y-auto transition-all duration-200 bg-white z-40 border-0 shadow-lg xl:p-6 max-xl:px-6 max-xl:w-72 max-xl:shadow-2xl max-xl:min-h-full ease-soft-in-out w-1/6 xl:translate-x-0 xl:bg-transparent ${
           isMenuOpening ? `` : `-translate-x-full`
         }`}
       >
-    
-        <nav className="pt-16 max-xl:pt-4">
         <div
-          className="top-2 -right-1 z-50 bg-green-500 text-green-200 w-10 h-10 hidden max-xl:flex rounded-s-full flex absolute"
+          className="top-2 -right-1 z-50 bg-green-500 text-white w-10 h-10 hidden max-xl:flex rounded-s-full flex absolute"
           onClick={() => toggleMenuAll(false)}
         >
           <i className="fa fa-angle-left m-auto"></i>
         </div>
+        <div className="flex items-center gap-3 border-b-slate-50 max-xl:pt-8">
+          <i className="fa text-2xl fa-atom"></i>
+          <h3 className="text-nowrap">TailoringPro</h3>
+        </div>
+        <nav className="py-6">
           <ul className="gap-y-3">
             <li>
               <Link
               href={route("dashboard")}
-                className="flex items-center gap-2 py-3 px-3 hover:bg-white rounded-lg"
+                className="flex items-center gap-2 py-3 px-3 bg-white hover:bg-white rounded-lg"
               >
                 <div className="bg-green-500 size-8 rounded-lg flex">
                   <i className="fa fa-home m-auto text-white text-sm"></i>
