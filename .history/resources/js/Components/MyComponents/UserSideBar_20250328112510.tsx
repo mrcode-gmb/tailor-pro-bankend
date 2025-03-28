@@ -245,11 +245,11 @@ const UserSideBar = ({ pageTitle }: any) => {
             </li>
             <li>
               <Link
-                href={`/role-and-permission`}
+                href={``}
                 className="flex text-nowrap items-center gap-2 py-3 px-3 hover:bg-white rounded-lg"
               >
                 <div className="bg-white text-slate-600 shadow-md rounded-lg size-8 flex">
-                  <i className="fa fa-user-gear m-auto text-sm"></i>
+                  <i className="fa fa-gear m-auto text-sm"></i>
                 </div>
                 <p className="text-sm text-slate-600">
                   Role & Permission
