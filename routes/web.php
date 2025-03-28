@@ -64,6 +64,10 @@ Route::middleware('auth')->group(function () {
     Route::controller(SubscriptionController::class)->group(function(){
         Route::get('/subscription-plan', 'index')->name('subscription.index');
     });
+
+    Route::get("/role-and-permission", function (){
+        return Inertia::render("RoleAndPermission");
+    });
     
     
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
