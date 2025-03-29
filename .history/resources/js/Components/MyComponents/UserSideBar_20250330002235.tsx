@@ -243,20 +243,7 @@ const UserSideBar = ({ pageTitle }: any) => {
                 </p>
               </Link>
             </li>
-            
-            <li>
-              <Link
-                href={route("permission.index")}
-                className="flex text-nowrap items-center gap-2 py-3 px-3 hover:bg-white rounded-lg"
-              >
-                <div className="bg-white text-slate-600 shadow-md rounded-lg size-8 flex">
-                  <i className="fa fa-user-gear m-auto text-sm"></i>
-                </div>
-                <p className="text-sm text-slate-600">
-                  Permissions
-                </p>
-              </Link>
-            </li>
+            permission.index
             <li>
               <Link
                 href={`/role-and-permission`}

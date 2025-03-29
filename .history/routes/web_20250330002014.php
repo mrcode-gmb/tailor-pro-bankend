@@ -1,17 +1,16 @@
 <?php
 
+use App\Http\Controllers\DesignsController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\DesignsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TailorsController;
-use App\Http\Controllers\MessagesController;
-use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\MeasurementController;
-use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\RegisteredUserMeasurementController;
+use App\Http\Controllers\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,8 +69,8 @@ Route::middleware('auth')->group(function () {
         return Inertia::render("RoleAndPermission");
     });
 
-    Route::get('/permissions', [PermissionController::class, 'index'])->name("permission.index");
-    Route::post('/permissions', [PermissionController::class, 'store'])->name("permission.store");
+    Route::get('/permissions', [PermissionController::class, 'index']);
+    Route::post('/permissions', [PermissionController::class, 'store']);
     
     
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

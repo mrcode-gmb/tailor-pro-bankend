@@ -71,7 +71,7 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/permissions', [PermissionController::class, 'index'])->name("permission.index");
-    Route::post('/permissions', [PermissionController::class, 'store'])->name("permission.store");
+    Route::post('/permissions', [PermissionController::class, 'store'])->name();
     
     
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

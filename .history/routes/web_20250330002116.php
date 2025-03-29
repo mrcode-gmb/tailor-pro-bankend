@@ -70,8 +70,8 @@ Route::middleware('auth')->group(function () {
         return Inertia::render("RoleAndPermission");
     });
 
-    Route::get('/permissions', [PermissionController::class, 'index'])->name("permission.index");
-    Route::post('/permissions', [PermissionController::class, 'store'])->name("permission.store");
+    Route::get('/permissions', [PermissionController::class, 'index'])->;
+    Route::post('/permissions', [PermissionController::class, 'store']);
     
     
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
