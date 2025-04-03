@@ -22,7 +22,6 @@ export default function RolesPermissions() {
   const [roles, setRoles] = useState(demoRoles);
   const [newRole, setNewRole] = useState("");
   const [openRole, setOpenRole] = useState(false);
-  const [roleId, setRoleId] = useState(null);
 
   // Function to add a new role
   const handleAddRole = () => {
@@ -72,11 +71,9 @@ export default function RolesPermissions() {
   const openPermissions = (id: any) => {
     if (openRole == false) {
       setOpenRole(true)
-      setRoleId(id)
     }
     else {
       setOpenRole(false)
-      setRoleId(null)
     }
   }
 
@@ -122,8 +119,7 @@ export default function RolesPermissions() {
                       {role.name}
                     </h3>
                     <div className="text-gray-500">
-                      
-                      {openRole && roleId == role.id ? <i className="fa fa-angle-down"></i> : <i className="fa fa-angle-up"></i>}
+                      <i className="fa fa-angle-up"></i>
                     </div>
                   </div>
 
@@ -131,7 +127,7 @@ export default function RolesPermissions() {
 
 
                   {/* Scrollable Permissions List */}
-                  <div className={`${(openRole && roleId == role.id) ? 'border p-3 h-auto' : 'border-0 p-0 h-0'}  overflow-hidden rounded bg-white shadow-sm`}>
+                  <div className={`${(openRole) ? '' : ''}   overflow-hidden rounded bg-white shadow-sm`}>
                     {/* Select All Checkbox */}
                     <div className="mb-2">
                       <label className="flex items-center space-x-2 cursor-pointer">
@@ -153,9 +149,9 @@ export default function RolesPermissions() {
                         <span>Select All</span>
                       </label>
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="grid grid-cols-2 gap-2">
                       {demoPermissions.map((perm): any => (
-                        <label className="flex items-center space-x-2 cursor-pointer text-nowrap">
+                        <label className="flex items-center space-x-2 cursor-pointer">
                           <input
                             type="checkbox"
                             checked={role.permissions.includes(perm)}

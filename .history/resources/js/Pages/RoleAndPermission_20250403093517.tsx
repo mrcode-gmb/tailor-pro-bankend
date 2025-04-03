@@ -123,7 +123,7 @@ export default function RolesPermissions() {
                     </h3>
                     <div className="text-gray-500">
                       
-                      {openRole && roleId == role.id ? <i className="fa fa-angle-down"></i> : <i className="fa fa-angle-up"></i>}
+                      {openRole && roleId == role.id ? <i className="fa fa-angle-up"></i> : }
                     </div>
                   </div>
 

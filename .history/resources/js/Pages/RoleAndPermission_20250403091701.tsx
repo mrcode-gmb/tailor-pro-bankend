@@ -21,8 +21,6 @@ export default function RolesPermissions() {
   // State
   const [roles, setRoles] = useState(demoRoles);
   const [newRole, setNewRole] = useState("");
-  const [openRole, setOpenRole] = useState(false);
-  const [roleId, setRoleId] = useState(null);
 
   // Function to add a new role
   const handleAddRole = () => {
@@ -44,7 +42,7 @@ export default function RolesPermissions() {
           ? {
             ...role,
             permissions: role.permissions.includes(permission)
-              ? role.permissions.filter((p: any) => p !== permission) // Remove permission
+              ? role.permissions.filter((p:any) => p !== permission) // Remove permission
               : [...role.permissions, permission], // Add permission
           }
           : role
@@ -68,17 +66,6 @@ export default function RolesPermissions() {
       )
     );
   };
-
-  const openPermissions = (id: any) => {
-    if (openRole == false) {
-      setOpenRole(true)
-      setRoleId(id)
-    }
-    else {
-      setOpenRole(false)
-      setRoleId(null)
-    }
-  }
 
   return (
     <>
@@ -111,51 +98,44 @@ export default function RolesPermissions() {
               </div>
 
               {/* Roles List */}
-              {roles.map((role: any) => (
+              {roles.map((role:any) => (
                 <div
                   key={role.id}
-                  onClick={() => { openPermissions(role.id) }}
-                  className="mb-4 p-4 border rounded-lg bg-gray-50 cursor-pointer"
+                  className="mb-4 p-4 border rounded-lg bg-gray-50"
                 >
-                  <div className="justify-between flex items-center">
-                    <h3 className="font-semibold text-lg mb-2">
-                      {role.name}
-                    </h3>
-                    <div className="text-gray-500">
-                      
-                      {openRole && roleId == role.id ? <i className="fa fa-angle-down"></i> : <i className="fa fa-angle-up"></i>}
-                    </div>
+                  <h3 className="font-semibold text-lg mb-2">
+                    {role.name}
+                  </h3>
+
+                  {/* Select All Checkbox */}
+                  <div className="mb-2">
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={
+                          role.permissions.length ===
+                          demoPermissions.length
+                        }
+                        onChange={() =>
+                          handleToggleAllPermissions(role.id)
+                        }
+                        className="peer hidden"
+                      />
+                      <div className="w-5 h-5 border-2 border-gray-400 rounded-md flex items-center justify-center 
+       peer-checked:border-green-500 peer-checked:bg-green-500 text-white">
+                        ✓
+                      </div>
+                      <span>Select All</span>
+                    </label>
                   </div>
 
 
 
-
                   {/* Scrollable Permissions List */}
-                  <div className={`${(openRole && roleId == role.id) ? 'border p-3 h-auto' : 'border-0 p-0 h-0'}  overflow-hidden rounded bg-white shadow-sm`}>
-                    {/* Select All Checkbox */}
-                    <div className="mb-2">
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={
-                            role.permissions.length ===
-                            demoPermissions.length
-                          }
-                          onChange={() =>
-                            handleToggleAllPermissions(role.id)
-                          }
-                          className="peer hidden"
-                        />
-                        <div className="w-5 h-5 border-2 border-gray-400 rounded-md flex items-center justify-center 
-       peer-checked:border-green-500 peer-checked:bg-green-500 text-white">
-                          ✓
-                        </div>
-                        <span>Select All</span>
-                      </label>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {demoPermissions.map((perm): any => (
-                        <label className="flex items-center space-x-2 cursor-pointer text-nowrap">
+                  <div className="border p-0 h-0  overflow-hidden rounded bg-white shadow-sm">
+                    <div className="grid grid-cols-2 gap-2">
+                      {demoPermissions.map((perm):any => (
+                        <label className="flex items-center space-x-2 cursor-pointer">
                           <input
                             type="checkbox"
                             checked={role.permissions.includes(perm)}
