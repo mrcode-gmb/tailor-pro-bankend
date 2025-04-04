@@ -2,7 +2,6 @@ import { useState } from "react";
 import UserSideBar from "@/Components/MyComponents/UserSideBar";
 import Footer from "@/Components/MyComponents/Footer";
 import { Head } from "@inertiajs/react";
-import axios from "axios";
 
 
 export default function RolesPermissions() {
@@ -35,17 +34,10 @@ export default function RolesPermissions() {
     };
     setRoles([...roles, newRoleObj]);
     setNewRole("");
-
-    axios.post(route("create.name"), newRoleObj).then(response => {
-      console.log(response)
-    }).catch(error => {
-      console.log(error)
-    })
   };
 
   // Function to toggle individual permissions
   const handleTogglePermission = (roleId: any, permission: any) => {
-    console.log(permission)
     setRoles(
       roles.map((role: any) =>
         role.id === roleId
@@ -130,7 +122,7 @@ export default function RolesPermissions() {
                       {role.name}
                     </h3>
                     <div className="text-gray-500">
-
+                      
                       {openRole && roleId == role.id ? <i className="fa fa-angle-down"></i> : <i className="fa fa-angle-up"></i>}
                     </div>
                   </div>
@@ -141,7 +133,7 @@ export default function RolesPermissions() {
                   {/* Scrollable Permissions List */}
                   <div className={`${(openRole && roleId == role.id) ? 'border p-3 h-auto' : 'border-0 p-0 h-0'}  overflow-hidden rounded bg-white shadow-sm`}>
                     {/* Select All Checkbox */}
-                    <div className="mb-2  bg-white shadow-lg p-3 rounded-lg">
+                    <div className="mb-2">
                       <label className="flex items-center space-x-2 cursor-pointer">
                         <input
                           type="checkbox"

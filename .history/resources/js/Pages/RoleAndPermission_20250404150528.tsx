@@ -2,7 +2,6 @@ import { useState } from "react";
 import UserSideBar from "@/Components/MyComponents/UserSideBar";
 import Footer from "@/Components/MyComponents/Footer";
 import { Head } from "@inertiajs/react";
-import axios from "axios";
 
 
 export default function RolesPermissions() {
@@ -33,14 +32,9 @@ export default function RolesPermissions() {
       name: newRole,
       permissions: [],
     };
+    
     setRoles([...roles, newRoleObj]);
     setNewRole("");
-
-    axios.post(route("create.name"), newRoleObj).then(response => {
-      console.log(response)
-    }).catch(error => {
-      console.log(error)
-    })
   };
 
   // Function to toggle individual permissions

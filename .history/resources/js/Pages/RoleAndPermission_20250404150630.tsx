@@ -38,8 +38,6 @@ export default function RolesPermissions() {
 
     axios.post(route("create.name"), newRoleObj).then(response => {
       console.log(response)
-    }).catch(error => {
-      console.log(error)
     })
   };
 

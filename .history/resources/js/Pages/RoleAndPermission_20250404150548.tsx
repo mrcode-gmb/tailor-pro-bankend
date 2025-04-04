@@ -36,11 +36,7 @@ export default function RolesPermissions() {
     setRoles([...roles, newRoleObj]);
     setNewRole("");
 
-    axios.post(route("create.name"), newRoleObj).then(response => {
-      console.log(response)
-    }).catch(error => {
-      console.log(error)
-    })
+    axios.post()
   };
 
   // Function to toggle individual permissions
