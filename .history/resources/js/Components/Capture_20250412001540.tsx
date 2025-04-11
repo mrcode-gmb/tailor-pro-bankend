@@ -126,8 +126,10 @@ const CapturePhoto = () => {
   };
 
   return (
-    <div className="container max-w-md">
-        <div className="p-0 aspect-[3/3.5] relative bg-black/10">
+    <div className="container max-w-md py-8 px-4">
+      <Card className="overflow-hidden">
+        
+        <CardContent className="p-0  relative bg-black/10">
           {!capturedImage ? (
             <>
               <video
@@ -140,7 +142,7 @@ const CapturePhoto = () => {
                 <Button 
                   variant="secondary" 
                   size="icon" 
-                  className="rounded-[50%] bg-white" 
+                  className="rounded-full" 
                   onClick={switchCamera}
                 >
                   <RefreshCw className="h-5 w-5" />
@@ -155,14 +157,14 @@ const CapturePhoto = () => {
             />
           )}
           <canvas ref={canvasRef} className="hidden" />
-        </div>
+        </CardContent>
         
         <CardFooter className="flex flex-col p-6 gap-4">
           {!capturedImage ? (
             <Button 
-              size="default" 
+              size="lg" 
               onClick={capturePhoto} 
-              className="rounded-[100%] h-16 w-16 p-0 bg-green-500 text-white"
+              className="rounded-full h-16 w-16 p-0"
             >
               <Camera className="h-8 w-8" />
             </Button>
@@ -180,7 +182,7 @@ const CapturePhoto = () => {
                 <Button 
                   onClick={processImage}
                   disabled={isLoading}
-                  className="flex-1 bg-green-500 text-white"
+                  className="flex-1"
                 >
                   {isLoading ? (
                     <>Processing...</>
@@ -194,6 +196,7 @@ const CapturePhoto = () => {
             </>
           )}
         </CardFooter>
+      </Card>
     </div>
   );
 };

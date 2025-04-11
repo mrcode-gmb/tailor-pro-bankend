@@ -12,7 +12,6 @@ import { TabsContent } from "@/Components/components/ui/tabs";
 import MeasurementList from "@/Components/MeasurementList";
 import ClientProfile from "@/Components/Capture";
 import CapturePhoto from "@/Components/Capture";
-import AICaptureModal from "@/Components/ModalsList/AICaptureModal";
 
 // Sample client data
 
@@ -80,7 +79,7 @@ const AiMeasurement = () => {
                             <MeasurementList />
                         </div>
                     </div>
-                    
+                    <CapturePhoto />
                     <div className=" relative">
                         <Footer />
                     </div>

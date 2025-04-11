@@ -127,7 +127,7 @@ const CapturePhoto = () => {
 
   return (
     <div className="container max-w-md">
-        <div className="p-0 aspect-[3/3.5] relative bg-black/10">
+        <div className="p-0 aspect-[3/4] relative bg-black/10">
           {!capturedImage ? (
             <>
               <video
@@ -140,7 +140,7 @@ const CapturePhoto = () => {
                 <Button 
                   variant="secondary" 
                   size="icon" 
-                  className="rounded-[50%] bg-white" 
+                  className="rounded-full bg-green-500 text-white" 
                   onClick={switchCamera}
                 >
                   <RefreshCw className="h-5 w-5" />

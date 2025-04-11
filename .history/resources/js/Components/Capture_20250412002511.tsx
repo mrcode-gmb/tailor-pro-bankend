@@ -127,7 +127,7 @@ const CapturePhoto = () => {
 
   return (
     <div className="container max-w-md">
-        <div className="p-0 aspect-[3/3.5] relative bg-black/10">
+        <div className="p-0 aspect-[3/4] relative bg-black/10">
           {!capturedImage ? (
             <>
               <video

@@ -80,7 +80,7 @@ const AiMeasurement = () => {
                             <MeasurementList />
                         </div>
                     </div>
-                    
+                    {/* <CapturePhoto /> */}
                     <div className=" relative">
                         <Footer />
                     </div>
