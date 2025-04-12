@@ -68,14 +68,14 @@ const AddMeasurementComponent = () => {
                               <p className="pb-3 text-slate-600">
                                 ArmHole (All Around)
                               </p>
-                              <div className="relative flex items-center">
+                              <div className="relative">
                                 <input
                                   type="number"
                                   placeholder="0.0"
                                   className="w-full outline-none appearance-none border border-gray-400  p-2 focus:border-green-700 rounded-lg"
                                 />
-                                <div className="p-3 text-sm py-3.5 rounded-lg bg-gray-100">
-                                  <p>Inch</p>
+                                <div>
+                                  i
                                 </div>
                               </div>
                             </div>
@@ -95,14 +95,14 @@ const AddMeasurementComponent = () => {
                               <p className="pb-3 text-slate-600">
                                 ArmHole (All Around)
                               </p>
-                              <div className="relative flex items-center">
+                              <div className="relative">
                                 <input
                                   type="number"
                                   placeholder="0.0"
                                   className="w-full outline-none appearance-none border border-gray-400  p-2 focus:border-green-700 rounded-lg"
                                 />
-                                <div className="p-3 text-sm py-3.5 rounded-lg bg-gray-100">
-                                  <p>Inch</p>
+                                <div>
+                                  i
                                 </div>
                               </div>
                             </div>
@@ -121,14 +121,14 @@ const AddMeasurementComponent = () => {
                               <p className="pb-3 text-slate-600">
                                 ArmHole (All Around)
                               </p>
-                              <div className="relative flex items-center">
+                              <div className="relative">
                                 <input
                                   type="number"
                                   placeholder="0.0"
                                   className="w-full outline-none appearance-none border border-gray-400  p-2 focus:border-green-700 rounded-lg"
                                 />
-                                <div className="p-3 text-sm py-3.5 rounded-lg bg-gray-100">
-                                  <p>Inch</p>
+                                <div>
+                                  i
                                 </div>
                               </div>
                             </div>
@@ -147,14 +147,14 @@ const AddMeasurementComponent = () => {
                               <p className="pb-3 text-slate-600">
                                 ArmHole (All Around)
                               </p>
-                              <div className="relative flex items-center">
+                              <div className="relative">
                                 <input
                                   type="number"
                                   placeholder="0.0"
                                   className="w-full outline-none appearance-none border border-gray-400  p-2 focus:border-green-700 rounded-lg"
                                 />
-                                <div className="p-3 text-sm py-3.5 rounded-lg bg-gray-100">
-                                  <p>Inch</p>
+                                <div>
+                                  i
                                 </div>
                               </div>
                             </div>
@@ -173,14 +173,14 @@ const AddMeasurementComponent = () => {
                               <p className="pb-3 text-slate-600">
                                 ArmHole (All Around)
                               </p>
-                              <div className="relative flex items-center">
+                              <div className="relative">
                                 <input
                                   type="number"
                                   placeholder="0.0"
                                   className="w-full outline-none appearance-none border border-gray-400  p-2 focus:border-green-700 rounded-lg"
                                 />
-                                <div className="p-3 text-sm py-3.5 rounded-lg bg-gray-100">
-                                  <p>Inch</p>
+                                <div>
+                                  i
                                 </div>
                               </div>
                             </div>
@@ -199,14 +199,14 @@ const AddMeasurementComponent = () => {
                               <p className="pb-3 text-slate-600">
                                 ArmHole (All Around)
                               </p>
-                              <div className="relative flex items-center">
+                              <div className="relative">
                                 <input
                                   type="number"
                                   placeholder="0.0"
                                   className="w-full outline-none appearance-none border border-gray-400  p-2 focus:border-green-700 rounded-lg"
                                 />
-                                <div className="p-3 text-sm py-3.5 rounded-lg bg-gray-100">
-                                  <p>Inch</p>
+                                <div>
+                                  i
                                 </div>
                               </div>
                             </div>
@@ -225,14 +225,14 @@ const AddMeasurementComponent = () => {
                               <p className="pb-3 text-slate-600">
                                 ArmHole (All Around)
                               </p>
-                              <div className="relative flex items-center">
+                              <div className="relative">
                                 <input
                                   type="number"
                                   placeholder="0.0"
                                   className="w-full outline-none appearance-none border border-gray-400  p-2 focus:border-green-700 rounded-lg"
                                 />
-                                <div className="p-3 text-sm py-3.5 rounded-lg bg-gray-100">
-                                  <p>Inch</p>
+                                <div>
+                                  i
                                 </div>
                               </div>
                             </div>
@@ -251,14 +251,14 @@ const AddMeasurementComponent = () => {
                               <p className="pb-3 text-slate-600">
                                 ArmHole (All Around)
                               </p>
-                              <div className="relative flex items-center">
+                              <div className="relative">
                                 <input
                                   type="number"
                                   placeholder="0.0"
                                   className="w-full outline-none appearance-none border border-gray-400  p-2 focus:border-green-700 rounded-lg"
                                 />
-                                <div className="p-3 text-sm py-3.5 rounded-lg bg-gray-100">
-                                  <p>Inch</p>
+                                <div>
+                                  i
                                 </div>
                               </div>
                             </div>
@@ -273,7 +273,7 @@ const AddMeasurementComponent = () => {
                       onClick={() => setShowModal(false)}
                       className="px-6 py-2 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600"
                     >
-                      Save
+                      GENERATE
                     </button>
                   </div>
                 </div>

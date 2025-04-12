@@ -7,7 +7,7 @@ import AddMeasurementComponent from "@/Components/ModalsList/AddMeasurementCompo
 import MeasurementCard from "@/Components/components/MeasurementCard";
 import AnimatedTransition from "@/Components/components/AnimatedTransition";
 import { Button } from "@/Components/components/ui/button";
-import { ArrowLeftCircle, Clock, PlusCircle, Ruler, Edit, Printer } from "lucide-react";
+import { ArrowLeftCircle, Clock, PlusCircle, Ruler,Edit, Printer } from "lucide-react";
 import { TabsContent } from "@/Components/components/ui/tabs";
 import MeasurementList from "@/Components/MeasurementList";
 
@@ -111,9 +111,7 @@ const ManualMeasurement = () => {
         console.log('Print measurement:', measurementId);
         // This would generate a printable version of the measurement card
     };
-    const goBack = () => {
-        window.history.back(); // Native browser back
-    };
+    
     return (
         <>
             <Head title="Manual Mesurement" />
@@ -127,24 +125,24 @@ const ManualMeasurement = () => {
                     </div>
 
                     {/* start dashboad  */}
-
+                   
 
                     <div className="w-full">
-                        <div onClick={goBack} className="m-auto my-6 flex items-center cursor-pointer gap-3">
-                            <ArrowLeftCircle className="text-gray-600" size={22} />
+                        <Link href="/" className="m-auto my-6 flex items-center gap-3">
+                            <ArrowLeftCircle className="text-gray-600" size={22}/>
                             <h4 className="text-slate-600  text-2xl">
                                 Add Mesurement
                             </h4>
-                        </div>
+                        </Link>
 
                         <div className="bg-white p-4 rounded-lg shadow-lg">
                             <div className="flex items-center gap-4 flex-wrap justify-between">
                                 <h3 className="text-xl ">Measurement History</h3>
-                                <AddMeasurementComponent />
+                                <AddMeasurementComponent/>
                             </div>
-                            <MeasurementList />
-                            <MeasurementList />
-                            <MeasurementList />
+                            <MeasurementList/>
+                            <MeasurementList/>
+                            <MeasurementList/>
                         </div>
                     </div>
 

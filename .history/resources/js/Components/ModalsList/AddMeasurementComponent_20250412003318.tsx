@@ -273,7 +273,7 @@ const AddMeasurementComponent = () => {
                       onClick={() => setShowModal(false)}
                       className="px-6 py-2 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600"
                     >
-                      Save
+                      GENERATE
                     </button>
                   </div>
                 </div>

@@ -111,9 +111,13 @@ const ManualMeasurement = () => {
         console.log('Print measurement:', measurementId);
         // This would generate a printable version of the measurement card
     };
-    const goBack = () => {
-        window.history.back(); // Native browser back
-    };
+    window.onclick = (e: any) => {
+        const div = document.getElementById("geModal");
+        if (e.target == div) {
+            setShowModal(false);
+            setIsVisible(false);
+        }
+    }
     return (
         <>
             <Head title="Manual Mesurement" />
@@ -130,12 +134,12 @@ const ManualMeasurement = () => {
 
 
                     <div className="w-full">
-                        <div onClick={goBack} className="m-auto my-6 flex items-center cursor-pointer gap-3">
+                        <Link href="/" onClick={() => setShowModal(true)} className="m-auto my-6 flex items-center gap-3">
                             <ArrowLeftCircle className="text-gray-600" size={22} />
                             <h4 className="text-slate-600  text-2xl">
                                 Add Mesurement
                             </h4>
-                        </div>
+                        </Link>
 
                         <div className="bg-white p-4 rounded-lg shadow-lg">
                             <div className="flex items-center gap-4 flex-wrap justify-between">
