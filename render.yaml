@@ -1,12 +1,12 @@
 databases:
   - name: tailorpro-db
-    plan: free
+    plan: starter
 
 services:
   - type: web
     name: tailorpro-backend
     env: docker
-    plan: free
+    plan: starter
     envVars:
       - key: APP_ENV
         value: production
@@ -38,6 +38,6 @@ services:
   - type: web
     name: tailorpro-frontend
     env: static
-    plan: free
+    plan: starter
     buildCommand: "npm install && npm run build"
     staticPublishPath: "build"
