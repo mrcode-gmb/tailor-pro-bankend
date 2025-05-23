@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: tailorpro-backend
+    env: docker
+    plan: free
+    buildCommand: ""  # Optional if Dockerfile handles build
+    startCommand: "php artisan serve --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: your-app-key
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: tailorpro-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: tailorpro-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: tailorpro-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: tailorpro-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: tailorpro-db
+          property: password
+
+  - type: web
+    name: tailorpro-frontend
+    env: static
+    plan: free
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "build"
+
+databases:
+  - name: tailorpro-db
+    plan: free
