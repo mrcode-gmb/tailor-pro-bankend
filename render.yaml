@@ -1,3 +1,7 @@
+databases:
+  - name: tailorpro-db
+    plan: free
+
 services:
   - type: web
     name: tailorpro-backend
@@ -7,7 +11,7 @@ services:
       - key: APP_ENV
         value: production
       - key: APP_KEY
-        value: your-app-key
+        value: base64:your-app-key-here
       - key: DB_CONNECTION
         value: pgsql
       - key: DB_HOST
@@ -30,3 +34,10 @@ services:
         fromDatabase:
           name: tailorpro-db
           property: password
+
+  - type: web
+    name: tailorpro-frontend
+    env: static
+    plan: free
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "build"
